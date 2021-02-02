@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Banner*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+}
+
+.WeaponTriangle {
+    height: 360px;
+    width: 525px;
+}
+
+/* Sword Lance Axe Div */
+
+main {
+    text-align: center;
+    background-color: steelblue;
+}
+
+.sword-lance-axe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.weapon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.weaponimg {
+    height: 50px;
+    width: 50px
+}
+
+/* Counter */
+
+.counters-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgb(10, 10, 10);
+    color: orangered;
+    border: 2px solid orange;
+    width: 20%;
+}
+
+.counter p {
+    font-family: monospace;
+    font-size: 4rem;
+    padding-top: 2rem;
+}

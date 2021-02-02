@@ -3,46 +3,42 @@
 <head>
   <title>Rock Paper Scissors</title>
   <meta charset="UTF-8"/>
+  <script type="text/javascript" src="rps.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-      
-function computerPlay() {
-    computerSelection = Math.floor((Math.random() * 3) + 1);
-    return computerSelection;
-}
-
-function userPlay() {
-    userSelection = window.prompt("Rock, Paper or Scissors?")
-    return userSelection;
-}
-
-function game() {
-    userPlay();
-    computerPlay();
-    if (userSelection == "Rock" && computerSelection == 1) {
-        window.alert("You tied, both chose Rock")
-    } else if (userSelection == "Rock" && computerSelection == 2) {
-        window.alert("You lost, Rock loses to Paper")
-    } else if (userSelection == "Rock" && computerSelection == 3) {
-        window.alert("You won! Rock beats Scissors")
-    } else if (userSelection == "Paper" && computerSelection == 1) {
-        window.alert("You won! Paper beats Rock")
-    } else if (userSelection == "Paper" && computerSelection == 2) {
-        window.alert("You tied, both chose Paper")
-    } else if (userSelection == "Paper" && computerSelection == 3) {
-        window.alert("You lost, Paper loses to Scissors")
-    } else if (userSelection == "Scissors" && computerSelection == 1) {
-        window.alert("You lost, Scissors loses to Rock")
-    } else if (userSelection == "Scissors" && computerSelection == 2) {
-        window.alert("You won! Scissors beats Paper")
-    } else if (userSelection == "Scissors" && computerSelection == 3) {
-        window.alert("You tied, both chose Scissors")
-    } else {
-        window.alert("Try again")
-    }
-}
-
-  </script>
+    <header class="header">
+        <div class="banner-img">
+            <img src="WeaponTriangle.png" class="WeaponTriangle" alt="Weapon Triangle">
+        </div>
+    </header>
+    <main>
+        <h1>Sword, Lance or Axe?</h1>
+        <h2>Choose your Weapon</h2>
+        <div class="sword-lance-axe">
+            <div class="weapon">
+                <img src="Chrom.png" alt="Chrom">
+                <img src="FEH_Sword.png" alt="Sword" class="weaponimg">
+            </div>
+            <div class="weapon">
+                <img src="Ephraim.png" alt="Ephraim">
+                <img src="FEH_Lance.png" alt="Lance" class="weaponimg">
+            </div>
+            <div class="weapon">
+                <img src="Hector.png" alt="Hector">
+                <img src="FEH_Axe.png" alt="Axe" class="weaponimg">
+            </div>
+        </div>
+        <div class="counters-div">
+            <div class="counter">
+                <h3>Player Score:</h3>
+                <p>0</p>
+            </div>
+            <div class="counter">
+                <h3>Computer Score:</h3>
+                <p>0</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
