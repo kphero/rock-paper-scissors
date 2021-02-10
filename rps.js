@@ -1,35 +1,73 @@
+const swordButton = document.querySelector("#sword-btn");
+const lanceButton = document.querySelector("#lance-btn");
+const axeButton = document.querySelector("#axe-btn");
+const playerp = document.querySelector("#playerp");
+const computerp = document.querySelector("#computerp");
+const announcement = document.querySelector("#announcement");
+let computerSelection = "";
+let pc = 0;
+let cc = 0;
+
+swordButton.addEventListener('click', swordPlay);
+lanceButton.addEventListener('click', lancePlay);
+axeButton.addEventListener('click', axePlay);
+
 function computerPlay() {
-    computerSelection = Math.floor((Math.random() * 3) + 1);
-    return computerSelection;
-}
-
-function userPlay() {
-    userSelection = window.prompt("Rock, Paper or Scissors?")
-    return userSelection;
-}
-
-function game() {
-    userPlay();
-    computerPlay();
-    if (userSelection == "Rock" && computerSelection == 1) {
-        window.alert("You tied, both chose Rock")
-    } else if (userSelection == "Rock" && computerSelection == 2) {
-        window.alert("You lost, Rock loses to Paper")
-    } else if (userSelection == "Rock" && computerSelection == 3) {
-        window.alert("You won! Rock beats Scissors")
-    } else if (userSelection == "Paper" && computerSelection == 1) {
-        window.alert("You won! Paper beats Rock")
-    } else if (userSelection == "Paper" && computerSelection == 2) {
-        window.alert("You tied, both chose Paper")
-    } else if (userSelection == "Paper" && computerSelection == 3) {
-        window.alert("You lost, Paper loses to Scissors")
-    } else if (userSelection == "Scissors" && computerSelection == 1) {
-        window.alert("You lost, Scissors loses to Rock")
-    } else if (userSelection == "Scissors" && computerSelection == 2) {
-        window.alert("You won! Scissors beats Paper")
-    } else if (userSelection == "Scissors" && computerSelection == 3) {
-        window.alert("You tied, both chose Scissors")
+    computerRandom = Math.floor((Math.random() * 3) + 1);
+    if (computerRandom === 1) {
+        computerSelection = "sword"
+    } else if (computerRandom === 2) {
+        computerSelection = "lance"
     } else {
-        window.alert("Try again")
+        computerSelection = "axe"
     }
+}
+
+function swordPlay() {
+    computerPlay()
+    if (computerSelection === 'sword') {
+        youTie()
+    } else if (computerSelection === 'lance') {
+        youLose()
+    } else {
+        youWin()
+    }
+}
+
+function lancePlay() {
+    computerPlay()
+    if (computerSelection === 'sword') {
+        youWin()
+    } else if (computerSelection === 'lance') {
+        youTie()
+    } else {
+        youLose()
+    }
+}
+
+function axePlay() {
+    computerPlay()
+    if (computerSelection === 'sword') {
+        youLose()
+    } else if (computerSelection === 'lance') {
+        youWin()
+    } else {
+        youTie()
+    }
+}
+
+function youWin() {
+    pc++
+    playerp.textContent = pc;
+    announcement.textContent = 'You Win!'
+}
+
+function youLose() {
+    cc++
+    computerp.textContent = cc;
+    announcement.textContent = 'You Lose!'
+}
+
+function youTie() {
+    announcement.textContent = 'Tied!'
 }

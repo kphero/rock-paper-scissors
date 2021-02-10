@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    height: 900px;
+}
+
 /* Header Banner*/
 
 .header {
@@ -23,6 +27,7 @@
 main {
     text-align: center;
     background-color: steelblue;
+    height: 100%;
 }
 
 .sword-lance-axe {
